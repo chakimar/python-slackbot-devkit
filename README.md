@@ -1,12 +1,57 @@
 # python-slackbot-devkit
-Docker for python slackbot development kit
+Python slackbot development kit
 
-## Run
+## Getting Started
+
+### Prerequisites
+* Docker
+
+or
+
+* Vagrant
+
+### Installing
+* Docker
+```
+docker pull chakimar/python-slackbot-devkit
+```
+
+
+or
+
+* Vagrant
+```
+vagrant up
+```
+
+## Development
+
+### Configure the bot
+* Docker
+
+Nothing to do.
+
+or
+
+* Vagrant
+
+Insert your api token to slackbot_settings.py
+```python:slackbot_settings.py
+API_TOKEN = "<your-api-token>"
+```
+
+### Run
+* Docker
 ```
 docker run -e API_TOKEN=xxx-xxx-xxx -it chakimar/python-slackbot-devkit
 ```
 
-## Develop
+or
+
+* Vagrant
 ```
-docker run -e API_TOKEN=xxx-xxx-xxx -it chakimar/python-slackbot-devkit /bin/bash
+vagrant ssh -- "python3 /vagrant/run.py"
 ```
+
+## Acknowledements
+* [Python slackbot library](https://github.com/lins05/slackbot)
