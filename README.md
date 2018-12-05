@@ -4,15 +4,8 @@ Python slackbot development kit
 ## Getting Started
 
 ### Prerequisites
-* Vagrant
-
 * Docker
 
-### Installing
-```
-vagrant plugin install vagrant-docker-compose
-vagrant up
-```
 
 ## Development
 
@@ -27,13 +20,13 @@ Set your API Token to environment value at runtime.(See below `Run` section)
 
 ### Build
 ```
-vagrant ssh -- sudo docker build /vagrant/Dockerfile -t mybot
+docker build . -t mybot
 ```
 
 
 ### Run
 ```
-vagrant ssh -- docker run -e API_TOKEN=xxx-xxx-xxx -it mybot
+docker run -e API_TOKEN=xxx-xxx-xxx -it mybot
 ```
 
 ##  Debug
@@ -45,7 +38,15 @@ API_TOKEN = "<your-api-token>"
 and run below
 
 ```
-vagrant ssh -- python3 /vagrant/run.py
+python3 run.py
+```
+
+## Vagrant
+
+### Installing
+```
+vagrant plugin install vagrant-docker-compose
+vagrant up
 ```
 
 ## Acknowledements
