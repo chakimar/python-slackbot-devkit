@@ -4,9 +4,8 @@ Python slackbot development kit
 ## Getting Started
 
 ### Prerequisites
-* Vagrant
-
 * Docker
+
 
 ### Get API Token
 
